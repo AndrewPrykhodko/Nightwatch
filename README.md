@@ -16,6 +16,7 @@ npm run build
 ```
 
 ### Run your tests
+launch selenium server with 'npm run start_selenium' if needed
 ```
 npm run test
 ```
