@@ -2,6 +2,8 @@ const Products = require('../facade/products.facade');
 const Create = require('../facade/create.facade');
 const validProducts = require('../data/create-products');
 
+console.log(validProducts);
+
 validProducts.map(product => describe(`Create Product -> ${product.name}`, function() {
     before(async (browser, done) => {
       await browser.url(browser.launchUrl);

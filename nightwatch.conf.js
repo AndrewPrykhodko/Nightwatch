@@ -25,6 +25,7 @@ module.exports = {
      "globals" : {
        "waiterTime" : 30000,
        "waiterPageLoad": 2000,
+       "defItemsPerPage": 5,
      },
      "silent": true,
       "desiredCapabilities": {
