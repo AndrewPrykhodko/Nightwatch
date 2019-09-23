@@ -70,7 +70,7 @@ testSet.set('sorting ascending',
       .equals('ascending');
     await products.pagePresent(browser);
     cells = await products.getCellsByKey(browser, this.field);
-    const disp = nightPromised.waitAllVisible(browser, cells);
+    await nightPromised.waitAllVisible(browser, cells);
     const content = await Promise.all(cells.map(cell =>
       nightPromised.getText(browser, cell)));
     expect(content).to.have.ordered.members(paginator(sortAsc(this.field)));
@@ -86,7 +86,7 @@ testSet.set('sorting descending',
       .equals('descending');
       await products.pagePresent(browser);
       cells = await products.getCellsByKey(browser, this.field);
-      const disp = nightPromised.waitAllVisible(browser, cells);
+      await nightPromised.waitAllVisible(browser, cells);
       const content = await Promise.all(cells.map(cell =>
         nightPromised.getText(browser, cell)));
       expect(content).to.have.ordered.members(paginator(sortDesc(this.field)));
